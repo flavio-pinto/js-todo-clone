@@ -41,6 +41,7 @@ h1 {
     list-style-position: inside;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     border-bottom-style: dashed;
+    text-transform: capitalize;
 }
 
 .element:last-child {
@@ -60,7 +61,7 @@ h1 {
 }
 
 .todo-list .element.completed {
-    text-decoration: line-through;
+    text-decoration: line-through wavy;
 }
 
 .template .element {
