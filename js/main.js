@@ -29,10 +29,24 @@ $(document).ready(function () {
         list.append(newToDoItem);
     }
 
-    // Rendere funzionante l'icona per eliminare elemento della lista
-    var deleteButton = $('.todo-list .element i:last-child');
-    deleteButton.click(function() {
-        $(this).parent().parent().remove();
+    // Rendere funzionante barra aggiunta elemento alla ToDo List
+    var addToDoElement = $('.add-todo');
+    addToDoElement.keyup(function(event){
+        if(event.which == 13) {
+            var newElement = addToDoElement.val().trim();
+
+            if(newElement !== '') {
+                var addNew = $('.template li').clone();
+                addNew.prepend(newElement);
+                list.append(addNew);
+
+                addToDoElement.val('');
+            }
+        }
     });
 
+    // Rendere funzionante l'icona per eliminare elemento della lista
+    $('body').on('click', '.todo-list .element i:last-child', function() {
+        $(this).parent().parent().remove();
+    });
 }); // end ready method
