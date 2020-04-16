@@ -59,8 +59,8 @@ h1 {
     border-left-style: dashed;
 }
 
-.element i:hover {
-    
+.todo-list .element.completed {
+    text-decoration: line-through;
 }
 
 .template .element {

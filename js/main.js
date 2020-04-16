@@ -45,8 +45,13 @@ $(document).ready(function () {
         }
     });
 
-    // Rendere funzionante l'icona per eliminare elemento della lista
+    // Rendere funzionante il pulsante per eliminare elemento della lista
     $('body').on('click', '.todo-list .element i:last-child', function() {
         $(this).parent().parent().remove();
+    });
+
+    // Rendere funzionante il pulsante per segnare attività eseguite
+    $('body').on('click', '.todo-list .element i:first-child', function() {
+        $(this).parent().parent().toggleClass('completed');
     });
 }); // end ready method
