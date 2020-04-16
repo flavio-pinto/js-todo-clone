@@ -45,9 +45,17 @@ $(document).ready(function () {
         }
     });
 
-    // Rendere funzionante il pulsante per eliminare elemento della lista
+    function cuteRemove(elim) {
+        elim.animate({opacity: '0'}, 150, function(){
+            elim.animate({height: '0px'}, 150, function(){
+                elim.remove();
+            });
+        });
+    }
+
     $('body').on('click', '.todo-list .element i:last-child', function() {
-        $(this).parent().parent().remove();
+        var elim = $(this).parent().parent();
+        cuteRemove(elim);
     });
 
     // Rendere funzionante il pulsante per segnare attività eseguite
