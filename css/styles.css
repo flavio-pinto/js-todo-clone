@@ -41,7 +41,12 @@ h1 {
     list-style-position: inside;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     border-bottom-style: dashed;
-    text-transform: capitalize;
+    border-left: 3px solid transparent;
+    transition: border 200ms;
+}
+
+.element:hover {
+    border-left: 3px solid #00539CFF;
 }
 
 .element:last-child {
@@ -51,6 +56,12 @@ h1 {
 .element i {
     transform: translateY(10%);
     cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 500ms;
+}
+
+.element i:hover {
+    opacity: 1;
 }
 
 .element i:last-child {
