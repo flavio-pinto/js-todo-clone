@@ -35,19 +35,22 @@ $(document).ready(function () {
         if(event.which == 13) {
             var newElement = addToDoElement.val().trim();
 
-            if(newElement !== '') {
+            if((newElement !== '') && (newElement.length < 35)) {
                 var addNew = $('.template li').clone();
                 addNew.prepend(newElement);
                 list.append(addNew);
 
                 addToDoElement.val('');
+            } else {
+                alert('Attenzione, non puoi inserire stringhe più lunghe di 35 caratteri, né stringhe vuote!')
             }
         }
     });
 
+    // Rendere funzionante il pulsante per rimuovere todo element
     function cuteRemove(elim) {
-        elim.animate({opacity: '0'}, 150, function(){
-            elim.animate({height: '0px'}, 150, function(){
+        elim.animate({opacity: '0'}, 150, function() {
+            elim.animate({height: '0px'}, 150, function() {
                 elim.remove();
             });
         });
