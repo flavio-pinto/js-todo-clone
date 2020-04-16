@@ -3,3 +3,4 @@
  * Usiamo i template in html e il clone per separare la parte logica (JS) dalla parte di markup (HTML)
  * Recap funzionalità: mostrare, aggiungere e eliminare elementi dalla lista
  */
+console.log('dio merda');

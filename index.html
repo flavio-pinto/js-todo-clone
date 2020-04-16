@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>ToDo List</title>
 </head>
 <body>
+    <!-- Inizio app -->
+    <div id="app">
+        <header>
+            <h1>My ToDo List</h1>
+        </header>
+
+        <!-- Corpo della ToDo list -->
+        <main>
+            <input type="text" class="add-todo" placeholder="Aggiungi cose da fare">
+
+            <!-- Lista cose da fare -->
+            <ul class="todo-list">
+                <li class="element">Fare colazione<i class="fas fa-minus-circle"></i></li>
+            </ul>
+        </main>
+    </div>
+
+    <!-- TEMPLATES -->
+    <div class="template">
+        <li class="element"><i class="fas fa-minus-circle"></i></li>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
